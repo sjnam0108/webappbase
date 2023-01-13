@@ -1,0 +1,104 @@
+acqDate: ""
+acqInput: ""
+acqPrice: ""
+acqType: ""
+addr1: "경기도 용인시 처인구 모현읍 능원로132번길 131-4"
+addr2: "131-4"
+addrDisp: "(우 16886) 경기도 용인시 처인구 모현읍 능원로132번길 131-4 131-4"
+amount: 42000
+appraisalId: 1821
+birthDate: Fri Sep 22 1972 00:00:00 GMT+0900 (대한민국 표준시) {}
+cPhone: "01049358219"
+cPhoneDisp: "010-4935-8219"
+category: "스마트폰"
+contractDate: null
+dealType: "S"
+delToCgTime: "2021-03-09 17:44"
+delToCgType: "D"
+delToMemType: ""
+dirty: false
+dirtyFields: {}
+displayType: "Y"
+endDate: null
+fee: 2500
+gender: "M"
+id: 611
+interestRate: 24
+lastPayDate: null
+loanBalance: 0
+loanContract: null //대출계약서
+loanType: ""
+memberFaceId: 228
+memberFaceUrl: null
+memberId: 122
+memberName: "박 태진"
+memberSignId: null
+memberSignUrl: null
+nextPayAmount: 0
+nextPayDate: null
+overdueDays: "-"
+parent: ƒ ()
+payIndex: 0
+periodType: ""
+pledge: "APPLE 아이폰6S"
+prevId: null
+repayType: ""
+result: "P"
+status: "I"
+uid: "1abacad6-02d1-459d-962d-fda0b837bda1"
+ukid: "cashgo01@naver.com"
+whoCreationDate: Wed Dec 04 2019 20:56:55 GMT+0900 (대한민국 표준시) {}
+whoLastUpdateDate: "2021-03-09T18:09:54"
+zipCode: "16886"
+_events: {change: Array(1)}
+_handlers: {}
+__proto__: init
+
+
+
+L 대출
+
+S 판매
+form.notpickup
+
+form_notpickup
+
+
+	if (delToCgType == "P"){
+		$("#deal-to-cg-time").html(dataItem.category);
+	} else {
+		var delToCgTimeTemplate = kendo.template($("#template-deal-cg-time").html());
+		$('#deal-to-cg-time').append(delToCgTimeTemplate(dataItem));
+	}
+
+APPR_TYPE
+
+alter table srs_deals MODIFY ACQ_DATE carchar(20);
+
+jasonlimkr@naver.com
+9K6ZGUVVAX
+
+|     495 | V           |              | 1        |                    | 22        | N        | ?쒖슱?밸퀎???≫뙆援??띿꽦濡?6湲?31             | 202??707??   |         NULL |  755000 |         1244 | 1975-11-11 00:00:00 | 01053098596 | ?명듃遺?      | 2019-11-11 00:00:00 | L         | Y            | 2019-12-10 00:00:00 | M      |            24 | D         |          409 |       159 | ???좏솚     |          410 | 1           | APPLE 2019 MacBook Pro(15??  |    NULL | M          | P      | C      | jasonlimkr@naver.com | 2019-11-11 13:45:21 | 2019-11-11 13:54:16 | 05531    | NULL                |            0 | 159-5210NZUSN.png | NULL          |               0 |         0 |    0 | NULL        |
+
+/api/appraisal/create/Realfakeinquiry
+
+
+				// 납입 원금, 납입 원금 누적
+				depoAmount1 = (int) amount;
+				depoAmountAcc1 = depoAmount1;
+
+				// 이자 대상 원금
+				intAmount1 = (int)amount;
+
+				// 이자
+				interest1 = (int)(Math.floor(intAmount1 * (intDPerDay * month1NDays + intLPerDay * month1LDays) / 10d) * 10d);
+
+				// 납입 원금, 납입 원금 누적
+				depoAmount1 = (int) amount;
+				depoAmountAcc1 = depoAmount1;
+
+				// 이자 대상 원금
+				intAmount1 = (int)amount;
+
+				// 이자
+				interest1 = (int)(Math.floor(intAmount1 * (intDPerDay * month1NDays + intLPerDay * month1LDays) / 10d) * 10d);

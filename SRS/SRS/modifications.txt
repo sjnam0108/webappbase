@@ -1,0 +1,89 @@
+deal 테이블
+
+대출신청 변경 /api/deal/createLoan
+1.취득경로(백화점, 전문점, 선물, 인터넷, 중고매입, 직접입력)
+2.취득시기(YY-MM)
+3.대부기간(2,3,4개월)
+4.상환유형(원금균등상환 추가)
+
+ukid: 이메일
+apiToken: 토큰
+prevId: 기존거래
+appraisalId: 감정요청
+signImage: (binary)
+zipCode: 우편번호
+addr1: 주소1
+addr2: 주소2
+category: 담보카테고리
+pledge: 담보명
+acqType: D   //이거변경 취득경로 deal테이블에 acq_type (D, S, P, N, O, I)
+acqInput: 취득경로직접
+acqPrice: 취득가격
+acqDate: 2021-03-04 //이거변경 취득시기 deal테이블에 acq_date (2021-03-11) varchar(20으로변경)
+amount: 대부금액
+interestRate: 이자율
+periodType: 2	//이거변경 대부기간 deal테이블에 period_type(2,3,4)
+contractDate: 계약일자
+endDate: 대부만료일
+repayType: M
+loanType: A //이거변경 상환유형 deal테이블에 loan_type(A,D,B)
+
+----------------------------------------------------------------
+
+판매신청 추가 /api/deal/createSell
+1.(우편번호, 주소1, 주소2)
+2.(취득경로, 취득경로 직접 입력, 취득가격, 취득시기)
+
+amount: 1 판매금액
+apiToken: "토큰"
+appraisalId: 1234 감정요청id
+category: "카테고리"
+pledge: "물품명"
+prevId: 123 기존거래
+ukid: "이메일"
+
+zipCode
+addr1
+addr2
+category
+
+		String zipCode = Util.parseString(loanVO.getZipCode());
+		String addr1 = Util.parseString(loanVO.getAddr1());
+		String addr2 = Util.parseString(loanVO.getAddr2());
+		String category = Util.parseString(loanVO.getCategory());
+
+		deal.setZipCode(zipCode);
+		deal.setAddr1(addr1);
+		deal.setAddr2(addr2);
+		deal.setCategory(Util.isValid(category) ? category : appr.getCatName());
+acqType: D   //추가 취득경로 deal테이블에 acq_type (D, S, P, N, O, I)
+acqInput: 취득경로직접
+acqPrice: 취득가격
+acqDate: 2021-03-04 //이거변경 취득시기 deal테이블에 acq_date (2021-03-11) varchar(20으로변경)
+
+		String acqType = Util.parseString(loanVO.getAcqType());
+		String acqInput = Util.parseString(loanVO.getAcqInput());
+		String acqPrice = Util.parseString(loanVO.getAcqPrice());
+		String acqDate = Util.parseString(loanVO.getAcqDate());
+
+		deal.setAcqType(acqType);
+		deal.setAcqInput(acqInput);
+		deal.setAcqPrice(acqPrice);
+		deal.setAcqDate(acqDate);
+----------------------------------------------------------------
+
+물품 입고/ 환수 방법 지정 추가
+1.퀵
+2.픽업서비스
+
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+
+1:1문의는 진가품 문의로 변경
+1.API 구성은 (A-015)
+2.구입시기추가
+3.기존사진 6개 -> 12개(필수6, 선택6)
+
+
+spring.signcast.co.kr

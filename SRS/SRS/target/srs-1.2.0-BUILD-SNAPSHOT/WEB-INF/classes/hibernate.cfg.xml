@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    	<property name="connection.url">jdbc:mysql://localhost:3306</property>
+    	<property name="connection.username">srs</property>
+    	<property name="connection.password">srs!pwd</property>
+    	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+    	<!-- property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    	<property name="connection.url">jdbc:mysql://DomainOrIp:3306/signcast?createDatabaseIfNotExist=true</property>
+    	<property name="connection.username">signcast</property>
+    	<property name="connection.password">signcastfnd</property>
+    	<property name="dialect">org.hibernate.dialect.MySQLDialect</property-->
+
+    	<!-- property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    	<property name="connection.url">jdbc:sqlserver://DomainOrIp:1433;databaseName=signcast;</property>
+    	<property name="connection.username">sa</property>
+    	<property name="connection.password">bbmc123!</property>
+    	<property name="dialect">org.hibernate.dialect.SQLServer2008Dialect</property-->
+    	
+    	<!-- property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+    	<property name="connection.url">jdbc:oracle:thin:@DomainOrIp:1521:SCDS</property>
+    	<property name="connection.username">signcast</property>
+    	<property name="connection.password">signcastfnd</property>
+    	<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property-->
+
+    	<property name="c3p0.min_size">1</property>
+    	<property name="c3p0.max_size">5</property>
+    	<property name="c3p0.timeout">300</property>
+    	<property name="c3p0.max_statements">50</property>
+    	<property name="c3p0.idle_test_period">3000</property>
+    	
+    	<property name="show_sql">true</property>
+    	<property name="format_sql">true</property>
+    	<property name="generate_statistics">true</property>
+    	<mapping class="kr.co.bbmc.models.srs.AutoCtrl"/>
+    	<mapping class="kr.co.bbmc.models.srs.Member"/>
+    	<mapping class="kr.co.bbmc.models.srs.LocalCtrl"/>
+    	<mapping class="kr.co.bbmc.models.srs.LcSr"/>
+    	<mapping class="kr.co.bbmc.models.srs.SteteTime"/>
+    	<mapping class="kr.co.bbmc.models.srs.SteteDay"/>
+    	<mapping class="kr.co.bbmc.models.srs.NoticeEnroll"/>
+    	<mapping class="kr.co.bbmc.models.srs.AppSpeedMgr"/>
+    	<mapping class="kr.co.bbmc.models.srs.FreezPredic"/>
+    	<mapping class="kr.co.bbmc.models.fnd.Menu"/>
+    	<mapping class="kr.co.bbmc.models.fnd.LoginLog"/>
+    	<mapping class="kr.co.bbmc.models.fnd.Privilege"/>
+    	<mapping class="kr.co.bbmc.models.fnd.Role"/>
+    	<mapping class="kr.co.bbmc.models.fnd.RolePrivilege"/>
+    	<mapping class="kr.co.bbmc.models.fnd.Site"/>
+    	<mapping class="kr.co.bbmc.models.fnd.SiteSite"/>
+    	<mapping class="kr.co.bbmc.models.fnd.SiteUser"/>
+    	<mapping class="kr.co.bbmc.models.fnd.User"/>
+    	<mapping class="kr.co.bbmc.models.fnd.UserPrivilege"/>
+    	
+    </session-factory>
+</hibernate-configuration>
